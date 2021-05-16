@@ -4,6 +4,7 @@ import Navbar from "./components/layout/Navbar";
 import Shops from "./components/shops/Shops";
 import ShopPage from "./components/shops/ShopPage";
 import axios from "axios";
+import Login from "./components/layout/Login";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 class App extends Component {
@@ -29,6 +30,7 @@ class App extends Component {
           <Navbar />
           <div className='container'>
             <Switch>
+              <Route exact path='/login' render={(props) => <Login />} />
               <Route
                 exact
                 path='/'
